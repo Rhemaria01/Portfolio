@@ -8,7 +8,7 @@ const Certifications = lazy(() => import("./components/Certifications"))
 const Contact = lazy(() => import("./components/Contact"))
 import Background from "./components/Background"
 import './App.css'
-import '@dotlottie/player-component';
+import'@dotlottie/player-component'
 function App() {
   const[animationEnded, setAnimationEnded] = useState(false)
 
