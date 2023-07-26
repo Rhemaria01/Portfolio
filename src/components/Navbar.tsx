@@ -37,10 +37,10 @@ const Navbar = () => {
           {nav.links.map((link,index)=>{
             return <li key={index} 
             className="text-primary rounded-md px-2 transition-all duration-500 hover:bg-white hover:drop-shadow-glow-circle 
-            hover:text-black font-bold"><button onClick={()=>handleClick(link.to)}>{link.link}</button></li>
+            hover:text-black font-bold"><button name={link.to + "link"} onClick={()=>handleClick(link.to)}>{link.link}</button></li>
           })}
         </ul>
-        <button name="hamburger" onClick={()=>setOpen(!open)} className="md:hidden">
+        <button name="menu button" onClick={()=>setOpen(!open)} className="md:hidden">
           <nav.hamburger/>
         </button>
         {open && <>
@@ -48,7 +48,7 @@ const Navbar = () => {
         <ul className="flex flex-col gap-8 items-center justify-center ">
           {nav.links.map((link,index)=>{
             return <li key={index} className="text-black font-bold">
-              <button name="link" onClick={()=>handleClick(link.to)}>
+              <button name={link.to + "link"}  onClick={()=>handleClick(link.to)}>
                 {link.link}
               </button>
               </li>
