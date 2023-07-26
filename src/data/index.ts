@@ -74,7 +74,7 @@ export const about =
 import PestSolutions from "../assets/pest solutions.webp"
 import PestSolutionsSmall from "../assets/pest solutions-small.webp"
 import Digicrowd from "../assets/Digicrowd.webp"
-import DigicrowdSmall from "../assets/Digicrowd-small.webp"
+import DigicrowdSmall from "../assets/DigiCrowd-small.webp"
 import TictacToe from "../assets/tictactoe.webp"
 import TictacToeSmall from "../assets/tictactoe-small.webp"
 import MRS from "../assets/mrs.webp"
