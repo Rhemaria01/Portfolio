@@ -24,9 +24,9 @@ const Projects = ({ended}: functionType) => {
     
 
   return (
-    <main  ref={containerRef}  className="flex flex-col gap-0 mb-5 container mx-auto" id="projects" >
+    <main  ref={containerRef}  className="flex flex-col gap-0 w-5/6 mb-5 conatiner mx-auto" id="projects" >
         <h2 className="text-4xl text-center md:text-left font-medium drop-shadow-glow-white mb-5">Projects</h2>
-        <div className="flex flex-row justify-start w-5/6 md:w-full mx-auto min-h-screen">
+        <div className="flex flex-row justify-start w-full md:w-full mx-auto min-h-screen">
             
                 {intersected  &&
                 <>
@@ -39,7 +39,7 @@ const Projects = ({ended}: functionType) => {
             <div>
                 {projects.slice(0,count).map((project,index) => {                   
                     return <div className="flex flex-col gap-8 mb-11  justify-center md:justify-start div-height  md:flex-row md:items-start 
-                                           h-[42rem] md:h-[52rem] lg:h-[32rem] xl:h-[28rem] md:mb-0" 
+                                           h-[46rem] sm:h-[42rem] md:h-[52rem] lg:h-[32rem] xl:h-[28rem] md:mb-0" 
                                            key={index}>
 
                             <div className="flex flex-row w-5/6 mx-auto gap-5 h-full md:w-1/2 md:mr-20 md:ml-0 md:gap-0">

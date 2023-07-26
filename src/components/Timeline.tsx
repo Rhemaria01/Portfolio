@@ -7,7 +7,7 @@ type props = {
 const Timeline = ({end,current}: props) => {
 
   return (
-    <div className="flex flex-col h-[44.75rem] md:h-[52rem] lg:h-[32rem] xl:h-[28rem] items-center " >
+    <div className="flex flex-col h-[48.75rem] sm:h-[44.75rem]  md:h-[52rem] lg:h-[32rem] xl:h-[28rem] items-center " >
       
         <h3 
         className="drop-shadow-glow-circle bullet w-3 opacity-0 aspect-square  z-50"

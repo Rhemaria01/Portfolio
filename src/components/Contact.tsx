@@ -28,9 +28,9 @@ const Contact = () => {
     const email = "722b0aaff3632fa3cfbd0c1dc1823108"
     
   return (
-    <article className='mb-20 mt-10 container mx-auto space-y-10 md:space-y-0' id="contact">
+    <article className='mb-20 mt-10  mx-auto w-[83vw] space-y-10 md:space-y-0' id="contact">
         <h2 className="text-4xl drop-shadow-glow-white text-center md:text-left ">Contact me</h2>
-        <div className='flex md:h-[50rem] flex-col-reverse md:flex-row items-center justify-center'>
+        <div className='flex md:h-[50rem] flex-col md:flex-row items-center justify-center'>
         <form
         action={`https://formsubmit.co/${email}`}
         method="POST"

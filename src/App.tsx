@@ -20,10 +20,10 @@ function App() {
   return (
     <>
 
-      <Background />
+      {/* <Background /> */}
 
       <Navbar />
-      
+
       <Suspense fallback={<Loader />}>
         <Introduction />
       </Suspense>

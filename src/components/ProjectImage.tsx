@@ -18,7 +18,7 @@ const ProjectImage = ({image,smallImg,links,title,current}: propsType) => {
         {/* <img src={image} alt={title} className=" md:w-full  aspect-auto rounded-md object-cover" /> */}
         <div className="flex gap-5">
             {links.map((link,index) => {
-                return <a href={link.to} className="bg-black rounded-md p-2 flex gap-2" key={index}>
+                return <a href={link.to} target="_blank" className="bg-black rounded-md p-2 flex gap-2" key={index}>
                     <img src={link.logo} alt={link.linkTo} className="aspect-sqaure w-5 "/>
                     {link.linkTo}
                 </a>

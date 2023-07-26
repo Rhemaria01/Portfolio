@@ -7,7 +7,7 @@ const Introduction = () => {
 
   return (
     <main 
-    className="h-full md:h-[100vh] container mx-auto w-full flex-col gap-y-28 flex md:flex-row justify-center items-center gap-x-40" 
+    className="h-full md:h-[100vh]  mx-auto w-[83vw] flex-col gap-y-28 flex md:flex-row justify-center items-center gap-x-40" 
     id="home">
 
             <h2 className="flex flex-col gap-2 w-52 mt-16 md:mt-0 text-center md:text-left">
