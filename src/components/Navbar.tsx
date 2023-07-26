@@ -29,7 +29,7 @@ const Navbar = () => {
     setOpen(false)
   }
   return (
-    <nav role="navigation" className={`md:h-[5vh] w-[83vw] md:w-full z-[60]  fixed flex justify-evenly ${ scrolled && "bg-[#111111] "} items-center `}>
+    <nav role="navigation" className={`md:h-[5vh] w-full  z-[60]  fixed flex justify-evenly ${ scrolled && "bg-[#111111] "} items-center `}>
         <h1 className=" text-white text-3xl  font-bold drop-shadow-glow-white ">
             <a href="/">{nav.title}</a>
         </h1>
