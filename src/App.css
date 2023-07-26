@@ -1,0 +1,41 @@
+@keyframes heightAnimation {
+      0% {height: 0%}
+      100% {height: 100%}
+  }
+.increase-height {
+    animation: heightAnimation 2500ms forwards;
+}
+
+@keyframes bullet {
+    0% { opacity: 0; transform: translateX(-25px);  }
+    100% { opacity: 1; transform: translateX(0); }
+}
+.bullet { 
+    animation: bullet 1000ms forwards;
+}
+@keyframes project {
+    0% { opacity: 0; transform: translateX(25px);  }
+    100% { opacity: 1; transform: translateX(0); }
+}
+.project-info { 
+    animation: project 1000ms forwards;
+}
+@keyframes project-img-section {
+    0% { opacity: 0; transform: translateX(-25px); }
+    100% { opacity: 1; transform: translateX(0);}
+}
+.project-img-section { 
+    animation: project-img-section 1000ms forwards;
+}
+@keyframes certificate {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0);}
+}
+.certificate{
+    animation: certificate 1500ms forwards ;
+}
+
+.blur-load{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
