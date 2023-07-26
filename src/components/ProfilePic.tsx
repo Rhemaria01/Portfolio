@@ -6,7 +6,7 @@ const ProfilePic = () => {
 
    return (
      <div >
-        <div className='absolute w-[30rem] md:w-[50rem] -translate-x-1/2 -translate-y-1/2 left-1/2 top-[48%] md:left-[51%]  md:top-1/2  '>
+        <div className='absolute w-[30rem] md:w-[50rem] -translate-x-1/2 -translate-y-1/2 left-1/2 top-[50%] md:left-[51%]  md:top-1/2  '>
             <dotlottie-player
             src={ProfileLottie}
             loop
