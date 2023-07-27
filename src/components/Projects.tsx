@@ -39,7 +39,7 @@ const Projects = ({ended}: functionType) => {
             <div>
                 {projects.slice(0,count).map((project,index) => {                   
                     return <div className="flex flex-col gap-8 mb-11  justify-center md:justify-start div-height  md:flex-row md:items-start 
-                                           h-[46rem] sm:h-[42rem] md:h-[52rem] lg:h-[32rem] xl:h-[28rem] md:mb-0" 
+                                           h-[52rem] xs:h-[46rem] sm:h-[42rem] md:h-[52rem] lg:h-[32rem] xl:h-[28rem] md:mb-0" 
                                            key={index}>
 
                             <div className="flex flex-row w-5/6 mx-auto gap-5 h-full md:w-1/2 md:mr-20 md:ml-0 md:gap-0">
