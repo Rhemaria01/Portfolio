@@ -1,4 +1,4 @@
-import {Suspense, lazy, useState } from "react"
+import {Suspense, lazy} from "react"
 import { intro } from "../data"
 import Loader from "./Loader"
 const ProfilePic = lazy(() => import("./ProfilePic"))
