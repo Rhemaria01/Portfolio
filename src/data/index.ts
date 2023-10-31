@@ -105,11 +105,8 @@ export const projects: Projects[] = [
         title: "PdfMate",
         description: `PDFMate transforms your PDF interactions. You can upload your documents and have dynamic conversations with them
                       via an intuitive chat interface. The platform is constructed using the NextJS framework, with support from 
-                      Tanstack Query and TRPC for data communication. Utilizing frontend libraries like Tailwind CSS and Shadcn ensures a seamless, elegant, and cohesive
-                      user interface. Uploadthing manages file storage, Pinecone handles file indexing, Planetscale for database with Prisma for client integration
-                      with database and, lastly, OpenAI API and Langchain.
-                      facilitate seamless integration with OpenAI services.`,
-        techstack: ["NextJS","TRPC","Tanstack Query","Tailwind","shadcn","UploadThing","Pinecone","OpenAI API","Langchain", "Prisma", "Planetscale"],
+                      Tanstack Query and TRPC for data communication and many more!`,
+        techstack: ["NextJS","TRPC","Tanstack Query","Tailwind & shadcn","UploadThing","Pinecone","OpenAI API","Langchain"],
         image: PdfMate,
         imageSmall: PdfMateSmall,
         links: [{
