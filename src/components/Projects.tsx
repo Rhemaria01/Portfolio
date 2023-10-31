@@ -24,7 +24,7 @@ const Projects = ({ended}: functionType) => {
     
 
   return (
-    <main  ref={containerRef}  className="flex flex-col gap-0 w-5/6 mb-5 conatiner mx-auto" id="projects" >
+    <article  ref={containerRef}  className="flex flex-col gap-0 w-5/6 mb-5 conatiner mx-auto" id="projects" >
         <h2 className="text-4xl text-center md:text-left font-medium drop-shadow-glow-white mb-5">Projects</h2>
         <div className="flex flex-row justify-start w-full md:w-full mx-auto min-h-screen">
             
@@ -75,7 +75,7 @@ const Projects = ({ended}: functionType) => {
             </>
             }   
         </div>
-    </main>
+    </article>
   )
 }
 

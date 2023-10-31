@@ -17,12 +17,13 @@ const Introduction = () => {
                 <span className="text-2xl md:text-4xl drop-shadow-glow-white font-medium">
                     {intro.designation}
                 </span>
-                <a href={intro.resume} download="Reenav_Hemaria_Resume">
+                
+                <a href={intro.resume} download="Reenav_Hemaria_Resume" className="z-50">
                     <button 
                     name="Resume"
                     className="bg-primary w-28 h-9 rounded-md md:w-40 md:h-12 md:rounded-2xl
                      hover:bg-white hover:drop-shadow-glow-white hover:text-lg hover:text-black hover:font-bold transition-all
-                     duration-500 text-[16px] font-extrathin">
+                     duration-500 text-[16px] font-extrathin ">
                         Resume
                     </button>
                 </a>

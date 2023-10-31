@@ -82,11 +82,48 @@ import MRSSmall from "../assets/mrs-small.webp"
 import FarmFresh from "../assets/farmfresh.webp"
 import FarmFreshSmall from "../assets/farmfresh-small.webp"
 import LinkLogo from "../assets/link.svg"
+import PdfMate from "../assets/pdfmate.webp"
+import PdfMateSmall from "../assets/pdfmate-small.webp"
 
-export const projects = [
+interface Links{
+    linkTo: "Github" | "Link"
+    logo: string
+    to: string;
+}
+
+interface Projects{
+    title: string;
+    description: string;
+    techstack: string[];
+    image: string;
+    imageSmall: string;
+    links: Links[];
+}
+
+export const projects: Projects[] = [
+    {
+        title: "PdfMate",
+        description: `PDFMate transforms your PDF interactions. You can upload your documents and have dynamic conversations with them
+                      via an intuitive chat interface. The platform is constructed using the NextJS framework, with support from 
+                      Tanstack Query and TRPC for data communication. Utilizing frontend libraries like Tailwind CSS and Shadcn ensures a seamless, elegant, and cohesive
+                      user interface. Uploadthing manages file storage, Pinecone handles file indexing, and, lastly, OpenAI API and Langchain
+                      facilitate seamless integration with OpenAI services.`,
+        techstack: ["NextJS","TRPC","Tanstack Query","Tailwind","shadcn","UploadThing","Pinecone","OpenAI API","Langchain"],
+        image: PdfMate,
+        imageSmall: PdfMateSmall,
+        links: [{
+            linkTo: "Github",
+            logo: GithubLogo,
+            to: "https://github.com/Rhemaria01/PDFMate"
+        },{
+            linkTo: "Link",
+            logo: LinkLogo,
+            to: "https://pdf-mate.vercel.app/"
+        }]
+    },
     {
         title: "Pest solutions",
-        description: `The Pest Solutions Marketing Website is a dynamic platform built using the React framework, 
+        description: `The Pest Solutions Marketing Website is a dynamic platform built using the React library, 
                       specifically designed to promote and market pest control services. The website aims to attract potential customers,
                       provide comprehensive information about the offered services, and generate leads for the pest solutions business.`,
         techstack: ["ReactJS","CSS", "SEO", "Image Optimization", "Responsive"],
