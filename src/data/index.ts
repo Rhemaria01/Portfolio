@@ -91,8 +91,10 @@ import MRSSmall from "../assets/mrs-small.webp";
 import FarmFresh from "../assets/farmfresh.webp";
 import FarmFreshSmall from "../assets/farmfresh-small.webp";
 import LinkLogo from "../assets/link.svg";
-import PdfMate from "../assets/pdfmate.webp";
-import PdfMateSmall from "../assets/pdfmate-small.webp";
+import Flexibuckets from "../assets/flexibuckets.webp"
+import FlexibucketsSmall from "../assets/flexibuckets-small.webp"
+import Crispymail from "../assets/crispymail.webp"
+import CrispymailSmall from "../assets/crispymail-small.webp"
 
 interface Links {
   linkTo: "Github" | "Link";
@@ -111,32 +113,48 @@ interface Projects {
 
 export const projects: Projects[] = [
   {
-    title: "PdfMate",
-    description: `PDFMate transforms your PDF interactions. You can upload your documents and have dynamic conversations with them
-                      via an intuitive chat interface. The platform is constructed using the NextJS framework, with support from 
-                      Tanstack Query and TRPC for data communication and many more!`,
+    title: "Flexibucket",
+    description: `FlexiBuckets is an open-source, self-hosted solution for managing multiple S3-compatible storage buckets in one unified interface. Perfect for developers and teams who work with various S3-compatible storage providers.`,
     techstack: [
       "NextJS",
-      "TRPC",
       "Tanstack Query",
       "Tailwind & shadcn",
-      "UploadThing",
-      "Pinecone",
-      "OpenAI API",
-      "Langchain",
+      "Zustand",
+      "Typescript"
     ],
-    image: PdfMate,
-    imageSmall: PdfMateSmall,
+    image: Flexibuckets,
+    imageSmall: FlexibucketsSmall,
     links: [
       {
         linkTo: "Github",
         logo: GithubLogo,
-        to: "https://github.com/Rhemaria01/PDFMate",
+        to: "https://github.com/flexibuckets/flexibuckets",
       },
       {
         linkTo: "Link",
         logo: LinkLogo,
-        to: "https://www.pdfmate.in/",
+        to: "https://www.flexibuckets.com/",
+      },
+    ],
+  },
+  {
+    title: "Crispy Mail",
+    description: `Crispymail is an AI-powered email assistant designed to enhance productivity by streamlining email management. It helps users save up to 8 hours a week by automatically filtering out low-priority emails, summarizing newsletters with daily TLDRs directly within Gmail, and applying custom rules for inbox organization and response automation.`,
+    techstack: [
+      "NextJS",
+      "Tanstack Query",
+      "Tailwind & shadcn",
+      "Typescript",
+      "Google APIS",
+      "Composio"
+    ],
+    image: Crispymail,
+    imageSmall: CrispymailSmall,
+    links: [
+      {
+        linkTo: "Link",
+        logo: LinkLogo,
+        to: "https://www.flexibuckets.com/",
       },
     ],
   },
