@@ -159,27 +159,6 @@ export const projects: Projects[] = [
     ],
   },
   {
-    title: "Pest solutions",
-    description: `The Pest Solutions Marketing Website is a dynamic platform built using the React library, 
-                      specifically designed to promote and market pest control services. The website aims to attract potential customers,
-                      provide comprehensive information about the offered services, and generate leads for the pest solutions business.`,
-    techstack: ["ReactJS", "CSS", "SEO", "Image Optimization", "Responsive"],
-    image: PestSolutions,
-    imageSmall: PestSolutionsSmall,
-    links: [
-      {
-        linkTo: "Github",
-        logo: GithubLogo,
-        to: "https://github.com/Rhemaria01/pestcontrolwebsite",
-      },
-      {
-        linkTo: "Link",
-        logo: LinkLogo,
-        to: "https://pestsolutions.netlify.app/",
-      },
-    ],
-  },
-  {
     title: "Digicrowd",
     description: `This is a decentralized crowdfunding platform built on the Ethereum blockchain.
                       The project uses ReactJS with Vite for the frontend, Solidity for smart contract development,
@@ -197,62 +176,12 @@ export const projects: Projects[] = [
     ],
   },
   {
-    title: "Async Tic Tac Toe (Mobile Only)",
-    description: `This is an asynchronous tic-tac-toe game built with ReactJS and Firebase.
-                      Users can log in using their email addresses and play in real-time with friends.
-                      The game board updates dynamically as players make their moves, and Firebase stores the game
-                      state to ensure users can pick up where they left off.`,
-    techstack: [
-      "ReactJS",
-      "Firebase-auth",
-      "Firebase-databse",
-      "Firestore",
-      "CSS",
-    ],
-    image: TictacToe,
-    imageSmall: TictacToeSmall,
-    links: [
-      {
-        linkTo: "Github",
-        logo: GithubLogo,
-        to: "https://github.com/Rhemaria01/AsyncTicTacToe",
-      },
-      {
-        linkTo: "Link",
-        logo: LinkLogo,
-        to: "https://asynctictactoe.netlify.app/",
-      },
-    ],
-  },
-  {
     title: "Movies Recommendation System",
     description: `Movie Recommendation System: A dynamic movie recommendation system developed with ReactJS for the frontend
                       and Flask for the backend, providing personalized movie suggestions based on user preferences and viewing history`,
     techstack: ["ReactJS", "Python", "Flask", "Jupyter", "CSS"],
     image: MRS,
     imageSmall: MRSSmall,
-    links: [
-      {
-        linkTo: "Github",
-        logo: GithubLogo,
-        to: "https://github.com/Rhemaria01/MRS",
-      },
-      {
-        linkTo: "Link",
-        logo: LinkLogo,
-        to: "https://moviesonthego.netlify.app/",
-      },
-    ],
-  },
-  {
-    title: "Farm Fresh",
-    description: `Farm Fresh is a revolutionary farmer's portal built with ReactJS and powered by Firebase,
-                      dedicated to fostering a direct and transparent connection between farmers and consumers. 
-                      By eliminating the middle man, we empower farmers to sell their fresh, organic produce directly to consumers,
-                      ensuring fair prices for both parties. No more excessive markups or hidden costs! `,
-    techstack: ["ReactJS", "Firebase", "CSS"],
-    image: FarmFresh,
-    imageSmall: FarmFreshSmall,
     links: [
       {
         linkTo: "Github",
