@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #04050c;
+  --color-deep: #080a17;
+  --color-hull: #0e1124;
+  --color-hull-2: #151a33;
+  --color-rim: #232a4d;
+  --color-star: #eef0ff;
+  --color-haze: #a3a8c9;
+  --color-mute: #636a92;
+  --color-plasma: #5ef2ff;
+  --color-nebula: #8b6cff;
+  --color-flare: #ff4fa3;
+  --color-solar: #ffbf5a;
+  --color-alert: #ff5d5d;
+  --color-go: #6dffb0;
+
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --animate-orbit: orbit 28s linear infinite;
+  --animate-orbit-rev: orbit 40s linear infinite reverse;
+  --animate-orbit-slow: orbit 70s linear infinite;
+  --animate-blink: blink 1.05s steps(1) infinite;
+  --animate-beacon: beacon 2.2s ease-out infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-scan: scan 5s linear infinite;
+  --animate-twinkle: twinkle 4s ease-in-out infinite;
+
+  @keyframes orbit {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  @keyframes beacon {
+    0% { transform: scale(0.5); opacity: 0.9; }
+    100% { transform: scale(2.8); opacity: 0; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+  @keyframes scan {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100%); }
+  }
+}
+
+html {
+  background: var(--color-void);
+  color-scheme: dark;
+}
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* body stays transparent so the fixed starfield (z -10) isn't painted over */
+body {
+  background: transparent;
+  color: var(--color-star);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body.locked { overflow: hidden; }
+
+::selection {
+  background: var(--color-plasma);
+  color: var(--color-void);
+}
+
+/* Nebula haze painted behind the starfield canvas */
+.nebula {
+  background:
+    radial-gradient(60vw 50vh at 85% 8%, rgb(139 108 255 / 0.09), transparent 70%),
+    radial-gradient(50vw 40vh at 5% 45%, rgb(94 242 255 / 0.04), transparent 70%),
+    radial-gradient(70vw 50vh at 70% 95%, rgb(255 79 163 / 0.04), transparent 70%),
+    var(--color-void);
+}
+
+/* Scanline over HUD panels */
+.hud-panel {
+  position: relative;
+  background: linear-gradient(180deg, rgb(17 21 42 / 0.92), rgb(8 10 23 / 0.95));
+  border: 1px solid rgb(35 42 77 / 0.9);
+}
+
+/* Targeting brackets on the four corners of an element */
+.brackets {
+  --b: rgb(94 242 255 / 0.55);
+  background:
+    linear-gradient(var(--b), var(--b)) top left / 14px 1px,
+    linear-gradient(var(--b), var(--b)) top left / 1px 14px,
+    linear-gradient(var(--b), var(--b)) top right / 14px 1px,
+    linear-gradient(var(--b), var(--b)) top right / 1px 14px,
+    linear-gradient(var(--b), var(--b)) bottom left / 14px 1px,
+    linear-gradient(var(--b), var(--b)) bottom left / 1px 14px,
+    linear-gradient(var(--b), var(--b)) bottom right / 14px 1px,
+    linear-gradient(var(--b), var(--b)) bottom right / 1px 14px;
+  background-repeat: no-repeat;
+}
+
+.text-hollow {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(238 240 255 / 0.4);
+}
+
+.text-aurora {
+  background: linear-gradient(100deg, var(--color-plasma), var(--color-nebula) 45%, var(--color-flare));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgb(163 168 201 / 0.12) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Stooky simulation */
+.sim-edge { stroke: #2b3360; transition: stroke 0.3s, opacity 0.3s; }
+.sim-edge.edge-live { stroke: var(--color-plasma); stroke-opacity: 0.8; }
+.sim-edge-dead { stroke: var(--color-alert); stroke-opacity: 0.35; }
+.sim-node rect { fill: #0b0e20; stroke: #2b3360; stroke-width: 1.2; transition: stroke 0.25s, fill 0.25s; }
+.sim-node-truth rect { stroke: rgb(109 255 176 / 0.45); }
+.sim-node.node-hit rect { stroke: var(--color-plasma); fill: #10183a; }
+.sim-node-dead rect { stroke: var(--color-alert); fill: #2a0c16; stroke-dasharray: 4 3; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  body.has-cursor, body.has-cursor a, body.has-cursor button, body.has-cursor [data-cursor] { cursor: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Starfield layers: only opacity/transform change, both GPU-composited */
+.sky { transition: opacity 1.2s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); transform-origin: 50% 50%; }
+.sky-dim { opacity: 0.45; }
+.sky-warp { transform: scale(1.12); }
