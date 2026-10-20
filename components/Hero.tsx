@@ -160,6 +160,16 @@ export default function Hero() {
               >
                 Open channel
               </button>
+              {profile.resume ? (
+                <a
+                  href={profile.resume}
+                  download="Reenav-Hemaria-Resume.pdf"
+                  data-cursor="engage"
+                  className="rounded-full border border-rim bg-void/60 px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-star transition-colors hover:border-plasma hover:text-plasma"
+                >
+                  Download resume
+                </a>
+              ) : null}
             </div>
           </motion.div>
 

@@ -12,7 +12,7 @@ export const profile = {
   // Fill these in before going live — the contact section only renders channels that are set.
   email: "",
   linkedin: "",
-  resume: "",
+  resume: "/Reenav-Hemaria-Resume.pdf",
   firstLaunch: "2023-06-01T00:00:00+05:30",
   tagline:
     "I design the data model, the request path, and what the system does when half its dependencies go dark.",
@@ -347,7 +347,7 @@ export const archive: ArchiveItem[] = [
     stack: ["Next.js", "TanStack Query", "Zustand", "shadcn/ui", "TypeScript"],
     links: [
       { label: "GitHub", href: "https://github.com/flexibuckets/flexibuckets" },
-      { label: "Site", href: "https://www.flexibuckets.com/" },
+      { label: "Site", href: "https://flexibuckets.thebrainfry.com/" },
     ],
   },
   {
