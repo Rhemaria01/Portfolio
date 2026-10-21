@@ -528,9 +528,9 @@ export const paper = {
 };
 
 export const logbook = [
+  { y: "2023", t: "IT Student Association", d: "Helped organize events, including the technical side of a national-level college fest." },
   { y: "2022", t: "Smart India Hackathon", d: "Team of six; placed 10th within the college." },
   { y: "2021", t: "Quiz competition", d: "Second rank." },
-  { y: "—", t: "IT Student Association", d: "Helped organize events, including the technical side of a national-level college fest." },
 ];
 
 export const certifications = ["ReactJS with Firebase · LearnCodeOnline", "MongoDB with NodeJS · Verzeo", "Getting Started with Python"];
