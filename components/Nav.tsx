@@ -87,6 +87,15 @@ export default function Nav() {
             <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-mute sm:block md:hidden xl:block">
               SEC {current.code}
             </span>
+            {profile.email ? (
+              <a
+                href={`mailto:${profile.email}`}
+                data-cursor="transmit"
+                className="hidden h-9 items-center rounded-full border border-rim px-3 font-mono text-[11px] uppercase tracking-[0.15em] text-haze transition-colors hover:border-plasma hover:text-plasma sm:inline-flex"
+              >
+                Email
+              </a>
+            ) : null}
             <button
               onClick={() => window.dispatchEvent(new Event("rh:console"))}
               data-cursor="console"
@@ -142,9 +151,16 @@ export default function Nav() {
                 </motion.li>
               ))}
             </ol>
-            <a href={profile.github} target="_blank" rel="noreferrer" className="relative mt-10 inline-block font-mono text-xs uppercase tracking-[0.2em] text-haze">
-              github / {profile.githubUser} ↗
-            </a>
+            <div className="relative mt-10 flex flex-col gap-3 font-mono text-xs uppercase tracking-[0.2em] text-haze">
+              {profile.email ? (
+                <a href={`mailto:${profile.email}`} className="transition-colors hover:text-plasma">
+                  mail / {profile.email} ↗
+                </a>
+              ) : null}
+              <a href={profile.github} target="_blank" rel="noreferrer" className="transition-colors hover:text-plasma">
+                github / {profile.githubUser} ↗
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -10,8 +10,8 @@ export const profile = {
   github: "https://github.com/Rhemaria01",
   githubUser: "Rhemaria01",
   // Fill these in before going live — the contact section only renders channels that are set.
-  email: "",
-  linkedin: "",
+  email: "reenavhemaria789@gmail.com",
+  linkedin: "https://www.linkedin.com/in/reenav-hemaria/",
   resume: "/Reenav-Hemaria-Resume.pdf",
   firstLaunch: "2023-06-01T00:00:00+05:30",
   tagline:
