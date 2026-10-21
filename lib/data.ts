@@ -53,7 +53,7 @@ export const orbits = [
     era: "2023 — 2025",
     title: "Full-stack product",
     tech: ["Express", "Django", "Prisma", "MongoDB", "tRPC", "TanStack Query", "Zustand", "Electron"],
-    note: "Led end-to-end SaaS builds at Code Rustlers: storage, AI email, CMS and chat products.",
+    note: "Led end-to-end SaaS builds at Code Rustlers: AI email, CMS, chat and client web products.",
   },
   {
     ring: "Outer orbit",
@@ -109,10 +109,10 @@ export const roles: Role[] = [
     period: "Aug 2023 — Dec 2024",
     kind: "First full-time role",
     summary:
-      "Shipped client and in-house products: FlexiBuckets, Crispy Mail, Bytereels, Chatboat and Vandana Fabrics.",
+      "Shipped in-house products at Code Rustlers (Crispy Mail, Bytereels, Chatboat) and delivered sites for clients.",
     points: [
-      "Built teams support and a Docker node loader for FlexiBuckets; the work was merged upstream.",
-      "Built a CMS-powered fabric showcase that increased signups by 30% in its first month.",
+      "Contributed teams support and a Docker node loader to FlexiBuckets (my open-source project); merged upstream.",
+      "Built a CMS-powered fabric showcase for Vandana Fabrics (my client) that increased signups by 30% in its first month.",
     ],
     tags: ["Next.js", "React", "Tailwind CSS", "shadcn/ui", "Zustand"],
   },
@@ -330,7 +330,7 @@ export const flightRules = [
 export type ArchiveItem = {
   name: string;
   year: string;
-  group: "agency" | "college" | "side";
+  group: "agency" | "college" | "side" | "oss" | "client";
   blurb: string;
   stack: string[];
   outcome?: string;
@@ -341,8 +341,8 @@ export const archive: ArchiveItem[] = [
   {
     name: "FlexiBuckets",
     year: "2024",
-    group: "agency",
-    blurb: "Open-source, self-hosted app for managing several S3-compatible buckets from one interface, with granular-permission file sharing.",
+    group: "oss",
+    blurb: "My open-source, self-hosted app for managing several S3-compatible buckets from one interface, with granular-permission file sharing.",
     outcome: "Supports files up to 15 GB",
     stack: ["Next.js", "TanStack Query", "Zustand", "shadcn/ui", "TypeScript"],
     links: [
@@ -361,8 +361,8 @@ export const archive: ArchiveItem[] = [
   {
     name: "Vandana Fabrics",
     year: "2024",
-    group: "agency",
-    blurb: "CMS-powered fabric showcase website with NextAuth sign-in.",
+    group: "client",
+    blurb: "Client site: CMS-powered fabric showcase with NextAuth sign-in.",
     outcome: "+30% signups in the first month",
     stack: ["Next.js", "Prisma", "NextAuth", "Tailwind CSS"],
     links: [{ label: "Site", href: "https://www.vandanafabrics.com" }],
@@ -455,6 +455,8 @@ export const archive: ArchiveItem[] = [
 
 export const archiveGroups = [
   { id: "all", label: "All signals" },
+  { id: "oss", label: "Open source" },
+  { id: "client", label: "Clients" },
   { id: "agency", label: "Code Rustlers" },
   { id: "college", label: "College" },
   { id: "side", label: "Side quests" },
@@ -529,7 +531,6 @@ export const logbook = [
   { y: "2022", t: "Smart India Hackathon", d: "Team of six; placed 10th within the college." },
   { y: "2021", t: "Quiz competition", d: "Second rank." },
   { y: "—", t: "IT Student Association", d: "Helped organize events, including the technical side of a national-level college fest." },
-  { y: "—", t: "Code Treasure Hunt", d: "Wrote the clues in three programming languages." },
 ];
 
 export const certifications = ["ReactJS with Firebase · LearnCodeOnline", "MongoDB with NodeJS · Verzeo", "Getting Started with Python"];

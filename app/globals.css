@@ -135,6 +135,8 @@ body.locked { overflow: hidden; }
 .sim-node-truth rect { stroke: rgb(109 255 176 / 0.45); }
 .sim-node.node-hit rect { stroke: var(--color-plasma); fill: #10183a; }
 .sim-node-dead rect { stroke: var(--color-alert); fill: #2a0c16; stroke-dasharray: 4 3; }
+.sim-node-batching rect { stroke: rgb(94 242 255 / 0.55); }
+.sim-node-divider { stroke: #2b3360; stroke-width: 1; }
 
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }

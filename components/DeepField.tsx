@@ -6,8 +6,8 @@ import { useState } from "react";
 import { archive, archiveGroups } from "@/lib/data";
 import { Section, SectionHead } from "./ui";
 
-const GROUP_TONE = { agency: "text-plasma", college: "text-solar", side: "text-flare" } as const;
-const GROUP_NAME = { agency: "Code Rustlers", college: "College", side: "Side quest" } as const;
+const GROUP_TONE = { agency: "text-plasma", college: "text-solar", side: "text-flare", oss: "text-go", client: "text-nebula" } as const;
+const GROUP_NAME = { agency: "Code Rustlers", college: "College", side: "Side quest", oss: "Open source", client: "Client" } as const;
 
 export default function DeepField() {
   const [filter, setFilter] = useState<(typeof archiveGroups)[number]["id"]>("all");
@@ -20,7 +20,7 @@ export default function DeepField() {
         label="Deep field"
         title="Older light,"
         accent="still worth seeing."
-        kicker="Agency SaaS builds, college projects and side quests from before the backend years. Most of the frontend instincts come from here."
+        kicker="Open-source work, client sites, agency SaaS builds, college projects and side quests from before the backend years. Most of the frontend instincts come from here."
       />
 
       <div className="no-scrollbar -mx-4 mb-10 flex gap-2 overflow-x-auto px-4 sm:mx-0 sm:px-0">
